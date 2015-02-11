@@ -3,7 +3,7 @@
  * @author jetienne / http://jetienne.com/
  * @author paulirish / http://paulirish.com/
  */
-var MemoryStats = function (){
+function MemoryStats(){
 
 	var msMin	= 100;
 	var msMax	= 0;
@@ -96,6 +96,4 @@ var MemoryStats = function (){
 
 };
 
-if (module && module.exports) {
-	module.exports = MemoryStats;
-}
+module.exports = MemoryStats;
