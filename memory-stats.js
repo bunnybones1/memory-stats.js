@@ -79,7 +79,8 @@ function MemoryStats(){
 			msText.textContent = "Mem: " + bytesToSize(ms, 2);
 
 			var normValue	= ms / (30*1024*1024);
-			var height	= Math.min( 30, 30 - normValue * 30 );
+			var height	= (1-(normValue% 1)) * 30;
+			console.log(height);
 			updateGraph( msGraph, height, color);
 
 			function bytesToSize( bytes, nFractDigit ){
